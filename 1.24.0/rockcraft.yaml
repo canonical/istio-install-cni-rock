@@ -22,6 +22,7 @@ environment:
 
 parts:
   # [install-cni](https://github.com/istio/istio/blob/master/cni/deployments/kubernetes/Dockerfile.install-cni)
+  # build instructions lifted from the makefile [here](https://github.com/istio/istio/blob/1a368466484cf10e42d5d80fe2837abe105489cc/Makefile.core.mk#L246)
   install-cni:
     plugin: go
     source: https://github.com/istio/istio
