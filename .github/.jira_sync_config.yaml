@@ -8,7 +8,7 @@ settings:
   components:
     - istio
     - team-mesh
-      
+
   add_gh_comment: false
   sync_description: false
   sync_comments: false
