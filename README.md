@@ -4,7 +4,8 @@
 [![Publish to GHCR:dev](https://github.com/canonical/istio-install-cni-rock/actions/workflows/rock-release-dev.yaml/badge.svg)](https://github.com/canonical/istio-install-cni-rock/actions/workflows/rock-release-dev.yaml)
 [![Update rock](https://github.com/canonical/istio-install-cni-rock/actions/workflows/rock-update.yaml/badge.svg)](https://github.com/canonical/istio-install-cni-rock/actions/workflows/rock-update.yaml)
 
-A [rock](https://canonical-rockcraft.readthedocs-hosted.com/en/latest/) for [Istio's](https://istio.io/) [install-cni](https://hub.docker.com/r/istio/install-cni) image.  
+A [rock](https://canonical-rockcraft.readthedocs-hosted.com/en/latest/) for [Istio's](https://istio.io/) [install-cni](https://hub.docker.com/r/istio/install-cni) image, which is defined [here](https://github.com/istio/istio/blob/master/cni/deployments/kubernetes/Dockerfile.install-cni).  This image is for installing Istio's CNI plugin, which is used for Istio's ambient mesh, and is described more [here](https://github.com/istio/istio/tree/master/cni#overview).
+
 This repository holds all the necessary files to build a rock for the upstream versions we support. The rock is used indirectly by the [istio-k8s-operator](https://github.com/canonical/istio-k8s-operator/) charm.
 
 The rocks on this repository are built with [OCI Factory](https://github.com/canonical/oci-factory/), which also takes care of periodically rebuilding the images.

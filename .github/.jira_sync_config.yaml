@@ -7,8 +7,8 @@ settings:
     
   components:
     - istio
-      
-  add_gh_comment: false
+
+add_gh_comment: false
   sync_description: false
   sync_comments: false
 
