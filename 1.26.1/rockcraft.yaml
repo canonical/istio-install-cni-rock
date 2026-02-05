@@ -4,7 +4,7 @@
 name: istio-install-cni
 summary: Istio's install-cni in a rock
 description: "Installs Istio's cni plugin"
-version: "1.24.3"
+version: "1.26.1"
 base: ubuntu@24.04
 build-base: ubuntu@24.04
 services:
@@ -29,9 +29,9 @@ parts:
     plugin: go
     source: https://github.com/istio/istio
     source-type: git
-    source-tag: "1.24.3"
+    source-tag: "1.26.1"
     build-snaps:
-      - go/1.23/stable
+      - go/1.24/stable
     override-build: |
       GOOS=linux GOARCH=amd64 LDFLAGS='-extldflags -static -s -w' common/scripts/gobuild.sh ./out/linux_amd64/ -tags=agent,disable_pgv ./cni/cmd/istio-cni ./cni/cmd/install-cni
 
@@ -40,7 +40,7 @@ parts:
 
       mkdir -p ${CRAFT_PART_INSTALL}/usr/local/bin
       cp out/linux_amd64/install-cni ${CRAFT_PART_INSTALL}/usr/local/bin
-      
+
   # install packages provided by the istio/iptables distroless image, which is a base for install-cni
   # as seen [here](https://github.com/istio/istio/blob/master/cni/deployments/kubernetes/Dockerfile.install-cni).
   # The base image is defined [here](https://github.com/istio/istio/blob/master/docker/iptables.yaml) using apko,

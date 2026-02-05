@@ -1,7 +1,7 @@
 # Rock for [install-cni](https://github.com/istio/istio/blob/master/cni/deployments/kubernetes/Dockerfile.install-cni).
 # This image's purpose is described [here](https://github.com/istio/istio/tree/master/cni#overview)
 
-name: install-cni
+name: istio-install-cni
 summary: Istio's install-cni in a rock
 description: "Installs Istio's cni plugin"
 version: "1.23.3"
@@ -25,7 +25,7 @@ environment:
 parts:
   # [install-cni](https://github.com/istio/istio/blob/master/cni/deployments/kubernetes/Dockerfile.install-cni)
   # build instructions lifted from the makefile [here](https://github.com/istio/istio/blob/master/Makefile.core.mk#L246)
-  install-cni:
+  istio-install-cni:
     plugin: go
     source: https://github.com/istio/istio
     source-type: git
@@ -60,7 +60,7 @@ parts:
   deb-security-manifest:
     plugin: nil
     after:
-      - install-cni
+      - istio-install-cni
       - stage-dependency-packages
       - ca-certs
     override-prime: |
