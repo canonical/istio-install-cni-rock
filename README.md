@@ -1,8 +1,8 @@
 # istio-install-cni-rock
 
-[![Open a PR to OCI Factory](https://github.com/canonical/istio-install-cni-rock/actions/workflows/rock-release-oci-factory.yaml/badge.svg)](https://github.com/canonical/istio-install-cni-rock/actions/workflows/rock-release-oci-factory.yaml)
-[![Publish to GHCR:dev](https://github.com/canonical/istio-install-cni-rock/actions/workflows/rock-release-dev.yaml/badge.svg)](https://github.com/canonical/istio-install-cni-rock/actions/workflows/rock-release-dev.yaml)
-[![Update rock](https://github.com/canonical/istio-install-cni-rock/actions/workflows/rock-update.yaml/badge.svg)](https://github.com/canonical/istio-install-cni-rock/actions/workflows/rock-update.yaml)
+[![Open a PR to OCI Factory](https://github.com/canonical/istio-install-cni-rock/actions/workflows/release-oci-factory.yaml/badge.svg)](https://github.com/canonical/istio-install-cni-rock/actions/workflows/release-oci-factory.yaml)
+[![Publish to GHCR:dev](https://github.com/canonical/istio-install-cni-rock/actions/workflows/release-dev.yaml/badge.svg)](https://github.com/canonical/istio-install-cni-rock/actions/workflows/release-dev.yaml)
+[![Update rock](https://github.com/canonical/istio-install-cni-rock/actions/workflows/update.yaml/badge.svg)](https://github.com/canonical/istio-install-cni-rock/actions/workflows/update.yaml)
 
 A [rock](https://canonical-rockcraft.readthedocs-hosted.com/en/latest/) for [Istio's](https://istio.io/) [install-cni](https://hub.docker.com/r/istio/install-cni) image, which is defined [here](https://github.com/istio/istio/blob/master/cni/deployments/kubernetes/Dockerfile.install-cni).  This image is for installing Istio's CNI plugin, which is used for Istio's ambient mesh, and is described more [here](https://github.com/istio/istio/tree/master/cni#overview).
 
