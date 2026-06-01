@@ -5,8 +5,8 @@ name: istio-install-cni
 summary: Istio's install-cni in a rock
 description: "Installs Istio's cni plugin"
 version: "1.29.0"
-base: ubuntu@24.04
-build-base: ubuntu@24.04
+base: ubuntu@26.04
+build-base: ubuntu@26.04
 services:
   install-cni:
     command: "/usr/local/bin/install-cni"
@@ -30,7 +30,7 @@ parts:
     build-snaps:
       - go/1.25/stable
     override-build: |
-      GOOS=linux GOARCH=amd64 LDFLAGS='-extldflags -static -s -w' common/scripts/gobuild.sh ./out/linux_amd64/ -tags=agent,disable_pgv ./cni/cmd/istio-cni ./cni/cmd/install-cni
+      VERSION=$CRAFT_PROJECT_VERSION GOOS=linux GOARCH=amd64 LDFLAGS='-extldflags -static -s -w' common/scripts/gobuild.sh ./out/linux_amd64/ -tags=agent,disable_pgv ./cni/cmd/istio-cni ./cni/cmd/install-cni
 
       mkdir -p ${CRAFT_PART_INSTALL}/opt/cni/bin
       cp out/linux_amd64/istio-cni ${CRAFT_PART_INSTALL}/opt/cni/bin
