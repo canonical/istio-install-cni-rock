@@ -1,3 +1,8 @@
+> [!IMPORTANT]
+> Moved to https://github.com/canonical/service-mesh/tree/main/rocks/istio-install-cni-rock.
+> This repo is no longer maintained.
+
+
 # istio-install-cni-rock
 
 [![Open a PR to OCI Factory](https://github.com/canonical/istio-install-cni-rock/actions/workflows/release-oci-factory.yaml/badge.svg)](https://github.com/canonical/istio-install-cni-rock/actions/workflows/release-oci-factory.yaml)
